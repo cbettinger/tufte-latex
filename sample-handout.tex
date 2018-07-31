@@ -62,7 +62,7 @@ The Tufte-\LaTeX\ classes will emit an error if you try to use
 \newthought{In his later books},\cite{Tufte2006} Tufte
 starts each section with a bit of vertical space, a non-indented paragraph,
 and sets the first few words of the sentence in \textsc{small caps}.  To
-accomplish this using this style, use the \Verb|\newthought| command:  
+accomplish this using this style, use the \Verb|\newthought| command:
 \begin{docspec}
   \doccmd{newthought\{In his later books\}, Tufte starts\ldots}
 \end{docspec}
@@ -126,11 +126,11 @@ command.\sidenote{The first paragraph of this document includes a citation.}
 The complete list of references may also be printed automatically by using
 the \Verb|\bibliography| command.  (See the end of this document for an
 example.)  If you do not want to print a bibliography at the end of your
-document, use the \Verb|\nobibliography| command in its place.  
+document, use the \Verb|\nobibliography| command in its place.
 
 To enter multiple citations at one location,\cite{Tufte2006,Tufte1990} you can
 provide a list of keys separated by commas and the same optional vertical
-offset argument: \Verb|\cite{Tufte2006,Tufte1990}|.  
+offset argument: \Verb|\cite{Tufte2006,Tufte1990}|.
 \begin{docspec}
   \doccmd{cite[\docopt{offset}]\{\docarg{bibkey1,bibkey2,\ldots}\}}
 \end{docspec}
@@ -148,7 +148,7 @@ use the \docenv{marginfigure} or \docenv{margintable} environments as follows
 
 \begin{marginfigure}%
   \includegraphics[width=\linewidth]{helix}
-  \caption{This is a margin figure.  The helix is defined by 
+  \caption{This is a margin figure.  The helix is defined by
     $x = \cos(2\pi z)$, $y = \sin(2\pi z)$, and $z = [0, 2.7]$.  The figure was
     drawn using Asymptote (\url{http://asymptote.sf.net/}).}
   \label{fig:marginfig}

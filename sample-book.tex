@@ -219,8 +219,8 @@ under the License.\index{license}
 \begin{doublespace}
 \noindent\fontsize{18}{22}\selectfont\itshape
 \nohyphenation
-Dedicated to those who appreciate \LaTeX{} 
-and the work of \mbox{Edward R.~Tufte} 
+Dedicated to those who appreciate \LaTeX{}
+and the work of \mbox{Edward R.~Tufte}
 and \mbox{Donald E.~Knuth}.
 \end{doublespace}
 \vfill
@@ -263,7 +263,7 @@ counted in the page number sequence).
 \begin{tabular}{lcccc}
 \toprule
  & \multicolumn{4}{c}{Books} \\
-\cmidrule(l){2-5} 
+\cmidrule(l){2-5}
 Page content & \vdqi & \ei & \ve & \be \\
 \midrule
 Blank half title page & \hangp{1} & \hangp{1} & \hangp{1} & \hangp{1} \\
@@ -294,7 +294,7 @@ iv,~\ldots).  Second, the front matter page numbering sequence is usually
 separate from the main matter page numbering.  That is, the page numbers
 restart at 1 when the main matter begins.  In contrast, Tufte has
 enumerated his pages with arabic numerals that share the same page counting
-sequence as the main matter.  
+sequence as the main matter.
 
 There are also some variations in design across Tufte's four books.  The
 page opposite the full title page (labeled ``frontispiece'' in the above
@@ -560,11 +560,11 @@ command.\sidenote{The first paragraph of this document includes a citation.}
 The complete list of references may also be printed automatically by using
 the \doccmddef{bibliography} command.  (See the end of this document for an
 example.)  If you do not want to print a bibliography at the end of your
-document, use the \doccmddef{nobibliography} command in its place.  
+document, use the \doccmddef{nobibliography} command in its place.
 
 To enter multiple citations at one location,\cite[-3\baselineskip]{Tufte2006,Tufte1990} you can
 provide a list of keys separated by commas and the same optional vertical
-offset argument: \Verb|\cite{Tufte2006,Tufte1990}|.  
+offset argument: \Verb|\cite{Tufte2006,Tufte1990}|.
 \begin{docspec}
   \doccmd{cite}[\docopt{offset}]\{\docarg{bibkey1,bibkey2,\ldots}\}
 \end{docspec}
@@ -582,7 +582,7 @@ use the \docenvdef{marginfigure} or \docenvdef{margintable} environments as foll
 
 \begin{marginfigure}%
   \includegraphics[width=\linewidth]{helix}
-  \caption{This is a margin figure.  The helix is defined by 
+  \caption{This is a margin figure.  The helix is defined by
     $x = \cos(2\pi z)$, $y = \sin(2\pi z)$, and $z = [0, 2.7]$.  The figure was
     drawn using Asymptote (\url{http://asymptote.sf.net/}).}
   \label{fig:marginfig}
@@ -819,12 +819,12 @@ options.  There are a few options that are specific to the
 The \docclsoptdef{a4paper} option will set the paper size to \smallcaps{A4} instead of
 the default \smallcaps{US} letter size.
 
-The \docclsoptdef{sfsidenotes} option will set the sidenotes and title block in a 
+The \docclsoptdef{sfsidenotes} option will set the sidenotes and title block in a
 \textsf{sans serif} typeface instead of the default roman.
 
 The \docclsoptdef{twoside} option will modify the running heads so that the page
 number is printed on the outside edge (as opposed to always printing the page
-number on the right-side edge in \docclsoptdef{oneside} mode).  
+number on the right-side edge in \docclsoptdef{oneside} mode).
 
 The \docclsoptdef{symmetric} option typesets the sidenotes on the outside edge of
 the page.  This is how books are traditionally printed, but is contrary to
@@ -832,7 +832,7 @@ Tufte's book design which sets the sidenotes on the right side of the page.
 This option implicitly sets the \docclsopt{twoside} option.
 
 The \docclsoptdef{justified} option sets all the text fully justified (flush left
-and right).  The default is to set the text ragged right.  
+and right).  The default is to set the text ragged right.
 The body text of Tufte's books are set ragged right.  This prevents
 needless hyphenation and makes it easier to read the text in the slightly
 narrower column.
@@ -850,13 +850,13 @@ The \docclsoptdef{nofonts} option prevents the \TL classes from
 automatically loading the Palatino and Helvetica typefaces.  You should use
 this option if you wish to load your own fonts.  If you're using \tXeLaTeX, this
 option is implied (i.e., the Palatino and Helvetica fonts aren't loaded if you
-use \tXeLaTeX).  
+use \tXeLaTeX).
 
 The \docclsoptdef{nols} option inhibits the letterspacing code.  The \TL\
 classes try to load the appropriate letterspacing package (either pdf\TeX's
 \docpkg{letterspace} package or the \docpkg{soul} package).  If you're using
 \tXeLaTeX\ with \docpkg{fontenc}, however, you should configure your own
-letterspacing.  
+letterspacing.
 
 The \docclsoptdef{notitlepage} option causes \doccmd{maketitle} to generate a title
 block instead of a title page.  The \doccls{book} class defaults to a title
@@ -903,11 +903,11 @@ preamble of each document.  The \TL classes provide three file hooks:
     classes just prior to any document-class-specific code.  If your
     customizations or code should be included in both the book and handout
     classes, use this file hook.
-  \item[\docfilehook{tufte-book-local.tex}{book}] 
+  \item[\docfilehook{tufte-book-local.tex}{book}]
     If this file exists, it will be loaded after all of the common and
     book-specific code has been read.  If your customizations apply only to the
     book class, use this file hook.
-  \item[\docfilehook{tufte-common-handout.tex}{handout}] 
+  \item[\docfilehook{tufte-common-handout.tex}{handout}]
     If this file exists, it will be loaded after all of the common and
     handout-specific code has been read.  If your customizations apply only to
     the handout class, use this file hook.
@@ -998,7 +998,7 @@ Each of the document class options takes one of five justification types:
     explicitly specified.
 \end{description}
 
-\noindent For example, 
+\noindent For example,
 \begin{docspec}
   \doccmdnoindex{documentclass}[symmetric,justified,marginals=raggedouter]\{tufte-book\}
 \end{docspec}

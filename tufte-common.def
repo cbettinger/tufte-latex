@@ -662,7 +662,7 @@
 %%
 % Improved letterspacing of small caps and all-caps text.
 %
-% First, try to use the `microtype' package, if it's available. 
+% First, try to use the `microtype' package, if it's available.
 % Failing that, try to use the `soul' package, if it's available.
 % Failing that, well, I give up.
 
@@ -674,7 +674,7 @@
 \newcommand{\allcaps}[1]{\allcapsspacing{\MakeTextUppercase{#1}}}
 \newcommand{\smallcaps}[1]{\smallcapsspacing{\MakeTextLowercase{#1}}}
 
-% If we're using pdfLaTeX v1.40+, use the letterspace package. 
+% If we're using pdfLaTeX v1.40+, use the letterspace package.
 % If we're using pdfLaTex < v1.40, use the soul package.
 % If we're using XeLaTeX, use XeLaTeX letterspacing options.
 % Otherwise fall back on the soul package.
@@ -858,7 +858,7 @@
   % Use grouping to emulate a multi-token afterassignment queue
   \begingroup%
   % Put `\toks 0 {' into the afterassignment queue
-  \aftergroup\toks\aftergroup0\aftergroup{% 
+  \aftergroup\toks\aftergroup0\aftergroup{%
   % Apply \trimb to the replacement text of #1, adding a leading
   % \noexpand to prevent brace stripping and to serve another purpose
   % later.
@@ -1162,7 +1162,7 @@
 }
 
 %%
-% Forces the outer edge of the caption to be set ragged.  
+% Forces the outer edge of the caption to be set ragged.
 % Therefore, on verso pages it's ragged left, and on recto pages it's ragged right.
 
 \newcommand*{\@tufte@justification@caption@outer}{%
@@ -1662,21 +1662,21 @@
 % See Bringhurst's _The Elements of Typography_, section 4.2.2.
 \renewcommand\subsubsection{%
   \@tufte@error{\string\subsubsection is undefined by this class.
-    See Robert Bringhurst's _The Elements of 
+    See Robert Bringhurst's _The Elements of
     Typographic Style_, section 4.2.2.
     \string\subsubsection was used}
-    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as 
-    many levels of headings as you need, no more and no fewer.  Also see the many 
+    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as
+    many levels of headings as you need, no more and no fewer.  Also see the many
     related threads on Ask E.T. at http://www.edwardtufte.com/.}
 }
 
 \renewcommand\subparagraph{%
   \@tufte@error{\string\subparagraph is undefined by this class.%
-    See Robert Bringhurst's _The Elements of 
+    See Robert Bringhurst's _The Elements of
     Typographic Style_, section 4.2.2.
     \string\subparagraph was used}
-    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as 
-    many levels of headings as you need, no more and no fewer.  Also see the many 
+    {From Bringhurst's _The Elements of Typographic Style_, section 4.2.2: Use as
+    many levels of headings as you need, no more and no fewer.  Also see the many
     related threads on Ask E.T. at http://www.edwardtufte.com/.}
 }
 
