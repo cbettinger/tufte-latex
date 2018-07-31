@@ -5,6 +5,7 @@
 %%
 % MODIFICATIONS by cbettinger
 % * changed color of page numbers
+% * changed color of margin items
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -483,6 +484,11 @@
 \newcommand*{\setcaptionfont}[1]{\renewcommand*{\@tufte@caption@font}{#1}}
 \newcommand*{\setmarginnotefont}[1]{\renewcommand*{\@tufte@marginnote@font}{#1}}
 \newcommand*{\setcitationfont}[1]{\renewcommand*{\@tufte@citation@font}{#1}}
+
+\setsidenotefont{\footnotesize\color{Maroon}}
+\setcaptionfont{\footnotesize\color{Maroon}}
+\setmarginnotefont{\footnotesize\color{Maroon}}
+\setcitationfont{\footnotesize\color{Maroon}}
 
 %%
 % Set the justification baesed on the `justified' class option
