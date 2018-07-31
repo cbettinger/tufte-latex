@@ -10,6 +10,7 @@
 % * do not print chapter, section, subsection and paragraph in italics
 % * provided command \subtitle to set a subtitle
 % * added subtitle to title page
+% * modified title page
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -1561,14 +1562,15 @@
 \newcommand{\maketitlepage}[0]{%
   \cleardoublepage%
   {%
-  \sffamily%
-  \begin{fullwidth}%
-  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklessauthor}}%
-  \vspace{11.5pc}%
-  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\thanklesstitle}}%
+  \rmfamily%
+  \vspace*{12.5pc}%
+  \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \vspace{1pc}%
   \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\plainsubtitle}}%
   \vfill%
+  \begin{fullwidth}%
+  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\thanklessauthor}%
+  \vspace{1pc}%
   \fontsize{14}{16}\selectfont\par\noindent\allcaps{\thanklesspublisher}%
   \end{fullwidth}%
   }
