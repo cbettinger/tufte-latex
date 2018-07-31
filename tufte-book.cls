@@ -1,3 +1,7 @@
+%%
+% MODIFICATIONS by cbettinger
+% * changed color of page numbers
+
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
 \ProvidesClass{tufte-book}[2015/06/30 v3.5.3 Tufte-book class]
@@ -31,8 +35,8 @@
   %\pagestyle{plain}%
   \fancyhf{}%
   \ifthenelse{\boolean{@tufte@twoside}}%
-    {\fancyhead[LE,RO]{\thepage}}%
-    {\fancyhead[RE,RO]{\thepage}}%
+    {\fancyhead[LE,RO]{\textcolor{Maroon}{\thepage}}}%
+    {\fancyhead[RE,RO]{\textcolor{Maroon}{\thepage}}}%
 }
 
 
@@ -50,11 +54,11 @@
   \ifthenelse{\boolean{@tufte@twoside}}%
     {% two-side
       \renewcommand{\chaptermark}[1]{\markboth{##1}{}}%
-      \fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
-      \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\thepage}% chapter title
+      \fancyhead[LE]{\textcolor{Maroon}{\thepage}\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
+      \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\textcolor{Maroon}{\thepage}}% chapter title
     }%
     {% one-side
-      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\thepage}% book title
+      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}% book title
     }%
 }
 

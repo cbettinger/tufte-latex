@@ -2,6 +2,10 @@
 %% This file contains the code that is common to the Tufte-LaTeX document classes.
 %%
 
+%%
+% MODIFICATIONS by cbettinger
+% * changed color of page numbers
+
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
 %%
@@ -1457,9 +1461,9 @@
 % The 'fancy' page style is the default style for all pages.
 \fancyhf{} % clear header and footer fields
 \ifthenelse{\boolean{@tufte@twoside}}
-  {\fancyhead[LE]{\thepage\quad\smallcaps{\newlinetospace{\plainauthor}}}%
-    \fancyhead[RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\thepage}}
-  {\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\thepage}}
+  {\fancyhead[LE]{\textcolor{Maroon}{\thepage}\quad\smallcaps{\newlinetospace{\plainauthor}}}%
+    \fancyhead[RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}}
+  {\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}}
 
 
 % The `plain' page style is used on chapter opening pages.
@@ -1470,8 +1474,8 @@
   % Uncomment the following five lines of code if you want the opening page
   % of the chapter to express the folio in the lower outside corner.
   %\ifthenelse{\boolean{@tufte@twoside}}
-  %  {\fancyfoot[LE,RO]{\thepage}}
-  %  {\fancyfoot[RE,RO]{\thepage}}
+  %  {\fancyfoot[LE,RO]{\textcolor{Maroon}{\thepage}}}
+  %  {\fancyfoot[RE,RO]{\textcolor{Maroon}{\thepage}}}
 }
 
 % The `empty' page style suppresses all headers and footers.
