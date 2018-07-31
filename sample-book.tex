@@ -5,6 +5,7 @@
 % * changed page style of dedication page in order to hide head
 % * added document class options 'a4paper' and 'oneside'
 % * modified copyright page
+% * added page background color (out commented)
 
 \documentclass[a4paper,oneside]{tufte-book}
 
@@ -16,6 +17,13 @@
 \subtitle{Revised Edition}
 \author{Dr. Henry Armitage}
 \publisher{Miscatonic University}
+
+%%
+% Page background color
+% Uncomment the following three lines if you want to add a page background color
+%\usepackage{pagecolor}
+%\definecolor{LightChamois}{HTML}{FFFFF3}
+%\pagecolor{LightChamois}
 
 %%
 % If they're installed, use Bergamo and Chantilly from www.fontsite.com.
@@ -1101,30 +1109,31 @@ The following is a list of packages that the \TL document
 classes rely upon.  Packages marked with an asterisk are optional.
 \begin{multicols}{2}
 \begin{itemize}
-  \item xifthen
+  \item beramono*
+  \item chngpage \emph{or} changepage
+  \item fancyhdr
+  \item fontenc
+  \item geometry
+  \item helvet*
+  \item hyperref
   \item ifpdf*
   \item ifxetex*
-  \item hyperref
-  \item geometry
-  \item ragged2e
-  \item chngpage \emph{or} changepage
-  \item paralist
-  \item textcase
-  \item soul*
   \item letterspace*
-  \item setspace
+  \item mathpazo*
   \item natbib \emph{and} bibentry
   \item optparams
+  \item pagecolor
+  \item paralist
   \item placeins
-  \item mathpazo*
-  \item helvet*
-  \item fontenc
-  \item beramono*
-  \item fancyhdr
-  \item xcolor
+  \item ragged2e
+  \item setspace
+  \item soul*
+  \item textcase
   \item textcomp
   \item titlesec
   \item titletoc
+  \item xcolor
+  \item xifthen
 \end{itemize}
 \end{multicols}
 

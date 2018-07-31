@@ -43,6 +43,7 @@ The following packages are required:
  * hyperref
  * natbib and bibentry
  * optparams
+ * pagecolor
  * paralist
  * placeins
  * ragged2e
