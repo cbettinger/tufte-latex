@@ -7,6 +7,7 @@
 % * changed color of page numbers
 % * changed color of margin items
 % * changed color of section, subsection, paragraph and newthought
+% * do not print chapter, section, subsection and paragraph in italics
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -1624,14 +1625,14 @@
 \titleformat{\chapter}%
   [display]% shape
   {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
-  {\itshape\huge\thechapter}% label
+  {\huge\thechapter}% label
   {0pt}% horizontal separation between label and title body
-  {\huge\rmfamily\itshape}% before the title body
+  {\huge\rmfamily}% before the title body
   [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
 
 \titleformat{\section}%
   [hang]% shape
-  {\normalfont\Large\itshape}% format applied to label+text
+  {\normalfont\Large}% format applied to label+text
   {\thesection}% label
   {1em}% horizontal separation between label and title body
   {\textcolor{Maroon}}% before the title body
@@ -1639,7 +1640,7 @@
 
 \titleformat{\subsection}%
   [hang]% shape
-  {\normalfont\large\itshape}% format applied to label+text
+  {\normalfont\large}% format applied to label+text
   {\thesubsection}% label
   {1em}% horizontal separation between label and title body
   {\textcolor{Maroon}}% before the title body
@@ -1647,7 +1648,7 @@
 
 \titleformat{\paragraph}%
   [runin]% shape
-  {\normalfont\itshape}% format applied to label+text
+  {\normalfont}% format applied to label+text
   {\theparagraph}% label
   {1em}% horizontal separation between label and title body
   {\textcolor{Maroon}}% before the title body
