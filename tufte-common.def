@@ -11,6 +11,7 @@
 % * provided command \subtitle to set a subtitle
 % * added subtitle to title page
 % * modified title page
+% * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -1620,7 +1621,7 @@
 %%
 % When \cleardoublepage is called, produce a blank (empty) page -- i.e.,
 % without headers and footers
-\def\cleardoublepage{\clearpage\if@twoside\ifodd\c@page\else
+\def\cleardoublepage{\clearpage\if@tufte@twoside\ifodd\c@page\else
   \hbox{}
   %\vspace*{\fill}
   %\begin{center}
