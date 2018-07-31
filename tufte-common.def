@@ -6,6 +6,7 @@
 % MODIFICATIONS by cbettinger
 % * changed color of page numbers
 % * changed color of margin items
+% * changed color of section, subsection, paragraph and newthought
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -788,7 +789,7 @@
 
 \providecommand\newthought[1]{%
    \tuftebreak
-   \noindent\textsc{#1}%
+   \noindent\textcolor{Maroon}{\textsc{#1}}%
 }
 
 %%
@@ -1633,7 +1634,7 @@
   {\normalfont\Large\itshape}% format applied to label+text
   {\thesection}% label
   {1em}% horizontal separation between label and title body
-  {}% before the title body
+  {\textcolor{Maroon}}% before the title body
   []% after the title body
 
 \titleformat{\subsection}%
@@ -1641,7 +1642,7 @@
   {\normalfont\large\itshape}% format applied to label+text
   {\thesubsection}% label
   {1em}% horizontal separation between label and title body
-  {}% before the title body
+  {\textcolor{Maroon}}% before the title body
   []% after the title body
 
 \titleformat{\paragraph}%
@@ -1649,7 +1650,7 @@
   {\normalfont\itshape}% format applied to label+text
   {\theparagraph}% label
   {1em}% horizontal separation between label and title body
-  {}% before the title body
+  {\textcolor{Maroon}}% before the title body
   []% after the title body
 
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
