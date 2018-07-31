@@ -8,6 +8,7 @@
 % * changed color of margin items
 % * changed color of section, subsection, paragraph and newthought
 % * do not print chapter, section, subsection and paragraph in italics
+% * provided command \subtitle to set a subtitle
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -639,6 +640,12 @@
     {\renewcommand{\plainpublisher}{\thanklesspublisher}}% use thankless publisher
     {\renewcommand{\plainpublisher}{#1}}% use provided plain-text publisher
 }
+
+%%
+% Provides a \subtitle command to set the subtitle
+
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+\newcommand{\plainsubtitle}[0]{\@subtitle}
 
 % TODO: Test \hypersetup{pdfauthor,pdftitle} with DVI and XeTeX
 
