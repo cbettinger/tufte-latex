@@ -15,6 +15,7 @@
 % Load the common style elements
 \input{tufte-common.def}
 
+
 %%
 % Set up any book-specific stuff now
 
@@ -24,52 +25,54 @@
 % contain only the (arabic) page number in the outside corner.
 %\newif\if@mainmatter \@mainmattertrue
 \renewcommand\frontmatter{%
-	\if@openright%
-		\cleardoublepage%
-	\else%
-		\clearpage%
-	\fi%
-	\@mainmatterfalse%
-	\pagenumbering{arabic}%
-	%\pagestyle{plain}%
-	\fancyhf{}%
-	\ifthenelse{\boolean{@tufte@twoside}}%
-		{\fancyhead[LE,RO]{\textcolor{Maroon}{\thepage}}}%
-		{\fancyhead[RE,RO]{\textcolor{Maroon}{\thepage}}}%
+  \if@openright%
+    \cleardoublepage%
+  \else%
+    \clearpage%
+  \fi%
+  \@mainmatterfalse%
+  \pagenumbering{arabic}%
+  %\pagestyle{plain}%
+  \fancyhf{}%
+  \ifthenelse{\boolean{@tufte@twoside}}%
+    {\fancyhead[LE,RO]{\textcolor{Maroon}{\thepage}}}%
+    {\fancyhead[RE,RO]{\textcolor{Maroon}{\thepage}}}%
 }
+
 
 %%
 % The main matter in Tufte's /Beautiful Evidence/ doesn't restart the page
 % numbering---it continues where it left off in the front matter.
 \renewcommand\mainmatter{%
-	\if@openright%
-		\cleardoublepage%
-	\else%
-		\clearpage%
-	\fi%
-	\@mainmattertrue%
-	\fancyhf{}%
-	\ifthenelse{\boolean{@tufte@twoside}}%
-		{% two-side
-			\renewcommand{\chaptermark}[1]{\markboth{##1}{}}%
-			\fancyhead[LE]{\textcolor{Maroon}{\thepage}\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
-			\fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\textcolor{Maroon}{\thepage}}% chapter title
-		}%
-		{% one-side
-			\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}% book title
-		}%
+  \if@openright%
+    \cleardoublepage%
+  \else%
+    \clearpage%
+  \fi%
+  \@mainmattertrue%
+  \fancyhf{}%
+  \ifthenelse{\boolean{@tufte@twoside}}%
+    {% two-side
+      \renewcommand{\chaptermark}[1]{\markboth{##1}{}}%
+      \fancyhead[LE]{\textcolor{Maroon}{\thepage}\quad\smallcaps{\newlinetospace{\plaintitle}}}% book title
+      \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\textcolor{Maroon}{\thepage}}% chapter title
+    }%
+    {% one-side
+      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}% book title
+    }%
 }
+
 
 %%
 % The back matter contains appendices, indices, glossaries, endnotes,
 % biliographies, list of contributors, illustration credits, etc.
 \renewcommand\backmatter{%
-	\if@openright%
-		\cleardoublepage%
-	\else%
-		\clearpage%
-	\fi%
-	\@mainmatterfalse%
+  \if@openright%
+    \cleardoublepage%
+  \else%
+    \clearpage%
+  \fi%
+  \@mainmatterfalse%
 }
 
 %%
@@ -80,8 +83,8 @@
 % If there is a `tufte-book-local.sty' file, load it.
 
 \IfFileExists{tufte-book-local.tex}{%
-	\@tufte@info@noline{Loading tufte-book-local.tex}%
-	\input{tufte-book-local}%
+  \@tufte@info@noline{Loading tufte-book-local.tex}%
+  \input{tufte-book-local}%
 }{}
 
 %%
