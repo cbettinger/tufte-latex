@@ -24,6 +24,7 @@
   {\begin{quotation}\if@tufte@sfsidenotes\begin{sffamily}\fi}
   {\if@tufte@sfsidenotes\end{sffamily}\fi\end{quotation}}
 
+
 %%
 % If there is a `tufte-handout-local.tex' file, load it.
 
