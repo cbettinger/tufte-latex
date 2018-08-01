@@ -1,4 +1,4 @@
-# tufte-latex
+# tufte-lovecraft-latex
 *Note*: This is a fork of https://github.com/Tufte-LaTeX/tufte-latex by Kevin Godby, Bil Kleb, and Bill Wood, originally licensed under the Apache License, Version 2.0.
 
 ## Quick Start
