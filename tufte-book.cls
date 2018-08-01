@@ -2,6 +2,7 @@
 % MODIFICATIONS by cbettinger
 % * changed color of page numbers
 % * added \copyrightpage and \dedicationpage
+% * show sections in main TOC
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
@@ -238,7 +239,7 @@
 
 %%
 % Only show the chapter titles in the table of contents
-\setcounter{tocdepth}{0}
+\setcounter{tocdepth}{1}
 
 %%
 % If there is a `tufte-book-local.sty' file, load it.
