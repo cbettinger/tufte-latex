@@ -14,6 +14,7 @@
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 % * changed vertical space between chapters in TOC
 % * do not print chapters in TOC in italics
+% * changed color of page numbers in TOCs
 % * added package pagecolor and provide color LightChamois
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
@@ -1731,25 +1732,25 @@
     {\vspace{1.0\baselineskip}\begin{fullwidth}\LARGE\rmfamily} % above (global formatting of entry)
     {\hspace*{0em}\contentslabel{2em}} % before w/label (label = ``2'')
     {\hspace*{0em}} % before w/o label
-    {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
+    {\rmfamily\upshape\qquad\textcolor{Maroon}{\thecontentspage}} % filler + page (leaders and page num)
     [\end{fullwidth}] % after
   \titlecontents{section}% FIXME
     [0em] % distance from left margin
-    {\vspace{0\baselineskip}\begin{fullwidth}\Large\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{0\baselineskip}\begin{fullwidth}\Large\rmfamily} % above (global formatting of entry)
     {\hspace*{2em}\contentslabel{2em}} % before w/label (label = ``2.6'')
     {\hspace*{2em}} % before w/o label
-    {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
+    {\rmfamily\upshape\qquad\textcolor{Maroon}{\thecontentspage}} % filler + page (leaders and page num)
     [\end{fullwidth}] % after
   \titlecontents{subsection}% FIXME
     [0em] % distance from left margin
-    {\vspace{0\baselineskip}\begin{fullwidth}\large\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{0\baselineskip}\begin{fullwidth}\large\rmfamily} % above (global formatting of entry)
     {\hspace*{4em}\contentslabel{4em}} % before w/label (label = ``2.6.1'')
     {\hspace*{4em}} % before w/o label
     {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
     [\end{fullwidth}] % after
   \titlecontents{paragraph}% FIXME
     [0em] % distance from left margin
-    {\vspace{0\baselineskip}\begin{fullwidth}\normalsize\rmfamily\itshape} % above (global formatting of entry)
+    {\vspace{0\baselineskip}\begin{fullwidth}\normalsize\rmfamily} % above (global formatting of entry)
     {\hspace*{6em}\contentslabel{2em}} % before w/label (label = ``2.6.0.0.1'')
     {\hspace*{6em}} % before w/o label
     {\rmfamily\upshape\qquad\thecontentspage} % filler + page (leaders and page num)
@@ -1790,7 +1791,7 @@
   \@tempdima 2.0em
   \advance\leftskip\@tempdima
   \null\nobreak\hskip -\leftskip
-  {#1}\nobreak\qquad\nobreak#2%
+  {#1}\nobreak\qquad\nobreak\textcolor{Maroon}{#2}%
   \par%
 }
 
