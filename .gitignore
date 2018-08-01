@@ -6,6 +6,7 @@
 *.fls
 *.out
 *.toc
+*.synctex(busy)
 
 ## Intermediate documents:
 *.dvi
@@ -132,5 +133,3 @@ sympy-plots-for-*.tex/
 Session.vim
 .netrwhist
 *~
-
-
