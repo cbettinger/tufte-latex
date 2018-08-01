@@ -2,7 +2,6 @@
 *Note*: This is a fork of https://github.com/Tufte-LaTeX/tufte-latex by Kevin Godby, Bil Kleb, and Bill Wood, originally licensed under the Apache License, Version 2.0.
 
 ## Quick Start
-
 Try typesetting `sample-handout.tex` with the following sequence
 of commands:
 
@@ -25,7 +24,6 @@ The sample book `sample-book.tex` can be compiled with the following sequence of
 The result should look like `sample-book.pdf`.
 
 ## Troubleshooting
-
 If you encounter errors of the form
 
     ! LaTeX Error: File `paralist.sty' not found.
@@ -66,21 +64,19 @@ The following packages are optional and will be automatically used if installed:
  * soul
 
 ## Bugs/Features/Support
-
 For kudos, feature requests, patches, or support requests that you
 feel are _particular_ to the original Tufte-LaTeX package, i.e., not a general
 LaTeX issue, please use the project's issue tracker available at <https://github.com/Tufte-LaTeX/tufte-latex/issues>.
 
 
-# License
+## License
 Copyright © 2018 by Christian Bettinger
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-# Original License
-
+## Original License
 Copyright 2007–2015 by Kevin Godby, Bil Kleb, and Bill Wood.
 
 Licensed under the Apache License, Version 2.0 (the "License");
