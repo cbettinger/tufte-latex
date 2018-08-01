@@ -471,6 +471,7 @@
   {}
   {\geometry{asymmetric}}% forces internal LaTeX `twoside'
 
+%\geometry{showframe} % display margins for debugging page layout
 
 %%
 % Separation marginpars by a line's worth of space.
