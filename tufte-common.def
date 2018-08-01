@@ -14,6 +14,7 @@
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 % * changed vertical space between chapters in TOC
 % * do not print chapters in TOC in italics
+% * added package pagecolor and provide color LightChamois
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -855,6 +856,11 @@
 %%
 % Color
 \RequirePackage[dvipsnames,svgnames]{xcolor}% load before bidi
+
+%%
+% Page Background Color
+\usepackage{pagecolor}
+\definecolor{LightChamois}{HTML}{FFFFF3}
 
 %%
 % Load the bidi package if instructed to do so.  This package must be loaded
