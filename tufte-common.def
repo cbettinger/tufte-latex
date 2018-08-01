@@ -228,7 +228,6 @@
   \ExecuteOptionsX[tufte]<common>{citation=auto,sidenote=auto,caption=auto,marginnote=auto}% autodetects best justification mode based on all class options
 }
 
-
 %%
 % Unsupported options
 
@@ -251,7 +250,6 @@
   {\ExecuteOptionsX[tufte]<common>{titlepage}}
   {\ExecuteOptionsX[tufte]<common>{notitlepage}}
 
-
 \DeclareOptionX*{%
   \@tufte@info@noline{Passing \CurrentOption\space to the `\@tufte@class' class.}%
   \PassOptionsToClass{\CurrentOption}{\@tufte@class}%
@@ -270,8 +268,6 @@
 \ifthenelse{\boolean{@twoside}}
   {\setboolean{@tufte@twoside}{true}}
   {}
-
-
 
 %%
 % Detect if we're using pdfLaTeX
@@ -453,7 +449,6 @@
   \setlength{\parskip}{0pt}%
 }
 
-
 %%
 % Set page layout geometry
 
@@ -470,7 +465,6 @@
 \ifthenelse{\boolean{@tufte@symmetric}}
   {}
   {\geometry{asymmetric}}% forces internal LaTeX `twoside'
-
 
 %%
 % Separation marginpars by a line's worth of space.
@@ -731,7 +725,6 @@
   \setboolean{@tufte@letterspace@pkg@prereqs}{false}
 \fi
 
-
 \newcommand{\@tufte@letterspacing@soul}{%
   \RequirePackage{soul}%
   \sodef\allcapsspacing{}{0.15em}{0.65em}{0.6em}%
@@ -806,7 +799,6 @@
 %% we're not to load letterspacing, so do nothing
 %}
 
-
 %%
 % An environment for paragraph-style section
 
@@ -847,7 +839,6 @@
 
 \renewcommand*\descriptionlabel[1]{\hspace\labelsep\normalfont\em #1}
 
-
 %%
 % Used for doublespacing, and other linespacing
 
@@ -872,7 +863,6 @@
     \@tufte@pkghook@post@bidi%
   }%
 }{}
-
 
 %%
 % A function that removes leading and trailling spaces from the supplied macro.
@@ -945,7 +935,6 @@
     }%
   }%
 }
-
 
 %%
 % Macros for holding the list of cite keys until after the \sidenote
@@ -1135,7 +1124,6 @@
   }{}%
 }
 
-
 %%
 % The placeins package provides the \FloatBarrier command.  This forces
 % LaTeX to place all of the floats before proceeding.  We'll use this to
@@ -1162,7 +1150,6 @@
   \marginpar{\usebox{\@tufte@margin@floatbox}}%
   }
 
-
 %%
 % Margin figure environment
 
@@ -1170,14 +1157,12 @@
   {\begin{@tufte@margin@float}[#1]{figure}}
   {\end{@tufte@margin@float}}
 
-
 %%
 % Margin table environment
 
 \newenvironment{margintable}[1][-1.2ex]%
   {\begin{@tufte@margin@float}[#1]{table}}
   {\end{@tufte@margin@float}}
-
 
 %%
 % Auto-detects the proper text alignment based on the various class options
@@ -1204,8 +1189,6 @@
     {\RaggedRight}%
     {\RaggedLeft}%
 }
-
-
 
 %%
 % A collection of macros to be used with the new Tufte-style float environments.
@@ -1375,14 +1358,12 @@
     }%
 }
 
-
 %%
 % Redefine the figure environment to place the captions in the margin space
 
 \renewenvironment{figure}[1][htbp]%
   {\ifvmode\else\unskip\fi\begin{@tufte@float}[#1]{figure}{}}
   {\end{@tufte@float}}
-
 
 %%
 % Redefine the table environment to place the captions in the margin space
@@ -1391,7 +1372,6 @@
   {\ifvmode\else\unskip\fi\begin{@tufte@float}[#1]{table}{}}
   {\end{@tufte@float}}
 
-
 %%
 % Full-width figure
 
@@ -1399,14 +1379,12 @@
   {\ifvmode\else\unskip\fi\begin{@tufte@float}[#1]{figure}{star}}
   {\end{@tufte@float}}
 
-
 %%
 % Full-width table
 
 \renewenvironment{table*}[1][htbp]%
   {\ifvmode\else\unskip\fi\begin{@tufte@float}[#1]{table}{star}}
   {\end{@tufte@float}}
-
 
 %%
 % Full-page-width area
@@ -1451,7 +1429,6 @@
   \RequirePackage{textcomp}
 }{}
 
-
 %%
 % Turns newlines into spaces.  Based on code from the `titlesec' package.
 
@@ -1471,7 +1448,6 @@
   #1%
   \let\\\@tufte@orig@cr% revert to original meaning of \\
 }
-
 
 %%
 % Sets up the running heads and folios.
@@ -1500,7 +1476,6 @@
     \fancyhead[RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}}
   {\fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}}
 
-
 % The `plain' page style is used on chapter opening pages.
 % In Tufte's /Beautiful Evidence/ he never puts page numbers at the
 % bottom of pages -- the folios are unexpressed.
@@ -1519,12 +1494,10 @@
   \fancyhf{} % clear header and footer fields
 }
 
-
 %%
 % Set raggedright and paragraph indentation for document
 
 \AtBeginDocument{\@tufte@justification}
-
 
 %%
 % Prints the list of class options and their states.
@@ -1572,7 +1545,6 @@
   \removelastskip\penalty-100\tufteskip\fi}
 
 \newcommand{\tufteskip}{\vspace\tufteskipamount}
-
 
 %%
 % Produces a full title page
@@ -1629,7 +1601,6 @@
   \tuftebreak% add some space before the text begins
   \@afterindentfalse\@afterheading% suppress indentation of the next paragraph
 }
-
 
 %%
 % Title page (if the `titlepage' option was passed to the tufte-handout
@@ -1714,7 +1685,6 @@
     related threads on Ask E.T. at http://www.edwardtufte.com/.}
 }
 
-
 % Formatting for main TOC (printed in front matter)
 % {section} [left] {above} {before w/label} {before w/o label} {filler + page} [after]
 \ifthenelse{\boolean{@tufte@toc}}{%
@@ -1796,7 +1766,6 @@
 \renewcommand*\l@figure{\@tufte@lof@line}
 \let\l@table\l@figure
 
-
 %%
 % A handy command to disable hyphenation for short bits of text.
 % Borrowed from Peter Wilson's `hyphenat' package.
@@ -1848,7 +1817,6 @@
 \renewcommand\subsubitem{\par\hangindent 4em\hspace*{2em}}
 \renewcommand\indexspace{\par\addvspace{1.0\baselineskip plus 0.5ex minus 0.2ex}\relax}%
 \newcommand{\lettergroup}[1]{}% swallow the letter heading in the index
-
 
 %%
 % A couple commands to incresae the number of floats you can use at a time.
@@ -1956,7 +1924,6 @@
   }%
 }
 
-
 %%
 % Detect if the subfigure package has been loaded
 
@@ -1967,7 +1934,6 @@
     {\gsetboolean{@tufte@packages@subfigure}{true}}
     {\gsetboolean{@tufte@packages@subfigure}{false}}%
 }
-
 
 %%
 % Detect of the float package has been loaded
@@ -2039,14 +2005,12 @@
   }
 }
 
-
 %%
 % For compatibility with the subfig package, we'll set captions=false so that
 % it doesn't load the caption package (which modifies our own caption
 % formatting).
 
 \PassOptionsToPackage{caption=false}{subfig}
-
 
 %%
 % If debugging is enabled, print the Tufte-LaTeX options and the list of
@@ -2056,7 +2020,6 @@
   {\PrintTufteSettings\listfiles}
   {}
 
-
 %%
 % If there is a `tufte-common-local.tex' file, load it up.
 
@@ -2064,7 +2027,6 @@
   {\input{tufte-common-local.tex}%
    \@tufte@info@noline{Loading tufte-common-local.tex}}
   {}
-
 
 %%
 % End of file
