@@ -26,6 +26,24 @@
 %\pagecolor{LightChamois}
 
 %%
+% For source code listings
+\usepackage{listings}
+\lstset{
+  frame=lines,                     % adds a frame around the code
+  captionpos=t,                    % sets the caption-position to bottom
+  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  basicstyle=\small,               % the size of the fonts that are used for the code
+  tabsize=3,                       % sets default tabsize to 3 spaces
+  breaklines=true,                 % sets automatic line breaking
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false                   % show tabs within strings adding particular underscores
+}
+
+%%
 % If they're installed, use Bergamo and Chantilly from www.fontsite.com.
 % They're clones of Bembo and Gill Sans, respectively.
 %\IfFileExists{bergamo.sty}{\usepackage[osf]{bergamo}}{}% Bembo
@@ -696,6 +714,31 @@ next page or reduce the number of sidenotes.  (Each sidenote actually uses
 
 After the floats have placed, \LaTeX{} will mark those slots as unused so they
 are available for the next page to be composed.
+
+\section{Listings}
+
+\begin{lstlisting}[name=Quicksort]
+void quicksort(int *A, int len) {
+	if (len < 2) return;
+
+	int pivot = A[len / 2];
+
+	int i, j;
+	for (i = 0, j = len - 1; ; i++, j--) {
+		while (A[i] < pivot) i++;
+		while (A[j] > pivot) j--;
+
+		if (i >= j) break;
+
+		int temp = A[i];
+		A[i]     = A[j];
+		A[j]     = temp;
+	}
+
+	quicksort(A, i);
+	quicksort(A + i, len - i);
+}
+\end{lstlisting}
 
 \section{Captions}
 You may notice that the captions are sometimes misaligned.
