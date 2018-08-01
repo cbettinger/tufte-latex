@@ -2,8 +2,7 @@
 *Note*: This is a fork of https://github.com/Tufte-LaTeX/tufte-latex by Kevin Godby, Bil Kleb, and Bill Wood, originally licensed under the Apache License, Version 2.0.
 
 ## Quick Start
-Try typesetting `sample-handout.tex` with the following sequence
-of commands:
+Try typesetting `sample-handout.tex` with the following sequence of commands:
 
     pdflatex sample-handout
     bibtex   sample-handout
@@ -29,45 +28,42 @@ If you encounter errors of the form
     ! LaTeX Error: File `paralist.sty' not found.
 
 you will need to obtain missing packages from [CTAN](http://ctan.org).
-For package installation instructions and answers to many other
-questions, see the [UK TeX FAQ](http://www.tex.ac.uk/faq/) or search the group [`comp.text.tex`](http://groups.google.com/group/comp.text.tex).
+
+For package installation instructions and answers to many other questions, see the [UK TeX FAQ](http://www.tex.ac.uk/faq/) or search the group [`comp.text.tex`](http://groups.google.com/group/comp.text.tex).
 
 The following packages are required:
 
- * chngpage or changepage
- * fancyhdr
- * fontenc
- * geometry
- * hyperref
- * natbib and bibentry
- * optparams
- * pagecolor
- * paralist
- * placeins
- * ragged2e
- * setspace
- * textcase
- * textcomp
- * titlesec
- * titletoc
- * xcolor
- * xifthen
+* chngpage or changepage
+* fancyhdr
+* fontenc
+* geometry
+* hyperref
+* natbib and bibentry
+* optparams
+* pagecolor
+* paralist
+* placeins
+* ragged2e
+* setspace
+* textcase
+* textcomp
+* titlesec
+* titletoc
+* xcolor
+* xifthen
 
 The following packages are optional and will be automatically used if installed:
 
- * beramono
- * helvet
- * ifpdf
- * ifxetex
- * letterspace (in the microtype package)
- * mathpazo
- * soul
+* beramono
+* helvet
+* ifpdf
+* ifxetex
+* letterspace (in the microtype package)
+* mathpazo
+* soul
 
 ## Bugs/Features/Support
-For kudos, feature requests, patches, or support requests that you
-feel are _particular_ to the original Tufte-LaTeX package, i.e., not a general
-LaTeX issue, please use the project's issue tracker available at <https://github.com/Tufte-LaTeX/tufte-latex/issues>.
-
+For kudos, feature requests, patches, or support requests that you feel are _particular_ to the original Tufte-LaTeX package, i.e., not a general LaTeX issue, please use the project's issue tracker available at <https://github.com/Tufte-LaTeX/tufte-latex/issues>.
 
 ## License
 Copyright © 2018 by Christian Bettinger

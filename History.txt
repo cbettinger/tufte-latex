@@ -29,7 +29,7 @@
 * Added optional offset parameter to sienotes, cite, etc. so their vertical
   position can be adjusted manually.
 * Added support for the `bidi' package with XeLateX.
-* Adjusted font sizes and spacing to more closely reflect those used in 
+* Adjusted font sizes and spacing to more closely reflect those used in
   Tufte's books.
 * Captions are now typeset in the margin as in Tufte's books.
 
