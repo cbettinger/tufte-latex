@@ -10,7 +10,7 @@
 % * do not print chapter, section, subsection and paragraph in italics
 % * provided command \subtitle to set a subtitle
 % * added subtitle to title page
-% * modified title page
+% * modified title page and title block
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 % * changed vertical space between chapters in TOC
 % * do not print chapters in TOC in italics
@@ -594,6 +594,8 @@
   July\or August\or September\or October\or November\or
   December\fi\space\number\year
 }
+
+\renewcommand{\today}[0]{\the\day.~\monthyear}% DD. MMM. YYYY
 
 % TODO Fix it so that \thanks is not spaced out (with `soul') and can be
 % used in \maketitle when the `sfsidenotes' option is provided.
@@ -1599,18 +1601,22 @@
     \setlength{\parskip}{4pt}%
     \let\@@title\@empty
     \let\@@author\@empty
+	\let\@@publisher\@empty
     \let\@@date\@empty
     \ifthenelse{\boolean{@tufte@sfsidenotes}}{%
-      \gdef\@@title{\sffamily\LARGE\allcaps{\@title}\par}%
+      \gdef\@@title{\sffamily\huge\allcaps{\@title}\par}%
       \gdef\@@author{\sffamily\Large\allcaps{\@author}\par}%
-      \gdef\@@date{\sffamily\Large\allcaps{\@date}\par}%
+      \gdef\@@publisher{\sffamily\normalsize\allcaps{\@publisher}\par}%
+      \gdef\@@date{\sffamily\normalsize\allcaps{\@date}\par}%
     }{%
-      \gdef\@@title{\LARGE\itshape\@title\par}%
-      \gdef\@@author{\Large\itshape\@author\par}%
-      \gdef\@@date{\Large\itshape\@date\par}%
+      \gdef\@@title{\huge\@title\par}%
+      \gdef\@@author{\Large\@author\par}%
+      \gdef\@@publisher{\normalsize\allcaps{\@publisher}\par}%
+      \gdef\@@date{\normalsize\@date\par}%
     }%
     \@@title
     \@@author
+	\@@publisher
     \@@date
   \endgroup
   \thispagestyle{plain}% suppress the running head
