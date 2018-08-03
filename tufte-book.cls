@@ -109,7 +109,7 @@
 	\url{https://github.com/cbettinger/tufte-latex}\\
 	Based on original work by Kevin Godby, Bil Kleb, and Bill Wood,\\
 	licensed under the Apache License, Version 2.0\\
-	\smallcaps{\url{https://github.com/Tufte-LaTeX/tufte-latex}}
+	\url{https://github.com/Tufte-LaTeX/tufte-latex}
 
 	\end{fullwidth}
 }
