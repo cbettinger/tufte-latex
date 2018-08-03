@@ -3,6 +3,7 @@
 % * changed color of page numbers
 % * added \copyrightpage and \dedicationpage
 % * show sections in main TOC
+% * changed format of dedication
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
@@ -117,11 +118,9 @@
 \newcommand{\dedicationpage}[1]{\cleardoublepage
 	\thispagestyle{empty}
 	~\vfill
-	\begin{doublespace}
-	\noindent\fontsize{18}{22}\selectfont\itshape
-	\nohyphenation
-	#1
-	\end{doublespace}
+	\begin{fullwidth}\begin{center}\begin{doublespace}
+	\noindent\fontsize{18}{22}\selectfont\itshape\nohyphenation\textcolor{Maroon}{\textsc{#1}}
+	\end{doublespace}\end{center}\end{fullwidth}
 	\vfill
 	\vfill
 }
