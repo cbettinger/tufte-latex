@@ -16,6 +16,7 @@
 % * do not print chapters in TOC in italics
 % * changed color of page numbers in TOCs
 % * added package pagecolor and provide color LightChamois
+% * changed format of chapter titles
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
