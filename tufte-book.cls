@@ -1,10 +1,10 @@
 %%
 % MODIFICATIONS by cbettinger
-% * changed color of page numbers
-% * added \copyrightpage and \dedicationpage
-% * show sections in main TOC
-% * changed format of dedication
+% * added \makecopyright and \makededication
 % * changed format of copyright page
+% * changed format of dedication page
+% * changed format of page numbers
+% * show sections in main TOC
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
@@ -95,7 +95,7 @@
 \newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
 
 % Inserts the copyright page
-\newcommand{\copyrightpage}{\newpage
+\newcommand{\makecopyright}{\newpage
 	\begin{fullwidth}
 	~\vfill
 	\thispagestyle{empty}
@@ -108,8 +108,8 @@
 
 	\par\smallcaps{\textsf{Typeset}}\\
 	\url{https://github.com/cbettinger/tufte-latex}
-	
-	
+
+
 	Based on original work by Kevin Godby, Bil Kleb, and Bill Wood,\\
 	licensed under the Apache License, Version 2.0\\
 	\url{https://github.com/Tufte-LaTeX/tufte-latex}
@@ -118,7 +118,7 @@
 }
 
 % Inserts a dedication page
-\newcommand{\dedicationpage}[1]{\cleardoublepage
+\newcommand{\makededication}[1]{\cleardoublepage
 	\thispagestyle{empty}
 	~\vfill
 	\begin{fullwidth}\begin{center}\begin{doublespace}

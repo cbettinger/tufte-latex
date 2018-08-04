@@ -1,6 +1,7 @@
 History.txt
+LICENSE
 Manifest.txt
-README.txt
+README.md
 graphics/nasa_vision_sm.png
 graphics/satir_graph.png
 graphics/helix.asy
@@ -16,6 +17,12 @@ graphics/vdqi-contents.pdf
 graphics/vdqi-title.pdf
 graphics/ve-contents.pdf
 graphics/ve-title.pdf
+sample-book-chapters/abstract.tex
+sample-book-chapters/compatibility.tex
+sample-book-chapters/customizing.tex
+sample-book-chapters/troubleshooting.tex
+sample-book-chapters/tufte-book.tex
+sample-book-chapters/tufte-design.tex
 sample-book.pdf
 sample-book.tex
 sample-handout.bib

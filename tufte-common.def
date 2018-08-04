@@ -4,22 +4,19 @@
 
 %%
 % MODIFICATIONS by cbettinger
-% * changed color of page numbers
-% * changed color of margin items
-% * changed color of section, subsection, paragraph and newthought
-% * do not print chapter, section, subsection and paragraph in italics
-% * provided command \subtitle to set a subtitle
+% * provided new command \subtitle to set a subtitle
 % * added subtitle to title page
-% * modified title page and title block
+% * changed format of title page and title block
+% * changed format of page numbers
+% * changed format of margin items
+% * changed format of chapter, section, subsection, paragraph and newthought
+% * changed format of TOCs
+% * added package pagecolor and added new color LightChamois
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
-% * changed vertical space between chapters in TOC
-% * do not print chapters in TOC in italics
-% * changed color of page numbers in TOCs
-% * added package pagecolor and provide color LightChamois
-% * changed format of chapter titles
-% * changed format of \newthought
-% * added XeTeX-compatible workaround for letter spacing
+% * added XeTeX-compatible letter spacing
 % * changed default fonts if using XeTeX
+% * removed command \hlred
+% * removed coloring of hyperlinks
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -666,7 +663,6 @@
 % Provides a \subtitle command to set the subtitle
 
 \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
-\newcommand{\plainsubtitle}[0]{\@subtitle}
 
 % TODO: Test \hypersetup{pdfauthor,pdftitle} with DVI and XeTeX
 
@@ -819,18 +815,18 @@
 	\setmainfont{ETBembo}[Mapping=TeX-text]
 	\setsansfont{Gill Sans MT}[Mapping=TeX-text,Scale=MatchUppercase]
 	\setmonofont{Consolas}[Scale=MatchLowercase]
-	
+
 	% XeTeX-compatible workaround for letter spacing
 	\newcommand{\textls}[2][5]{\begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup}
 	\renewcommand{\allcapsspacing}[1]{\textls[15]{#1}}
-	
+
 	\renewcommand{\allcaps}[1]{\textls[15]{\MakeTextUppercase{#1}}}
-	
+
 	\renewcommand{\smallcapsspacing}[1]{\textls[10]{#1}}
 	\renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeUppercase{#1}}}
 	\renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
 	\renewcommand{\textsc}[1]{\smallcaps{#1}}
-	
+
 	\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
 	\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
 \fi
@@ -1611,7 +1607,7 @@
   \vspace*{12.5pc}%
   \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \vspace{1pc}%
-  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\textsf{\plainsubtitle}}}%
+  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\textsf{\@subtitle}}}%
   \vfill%
   \begin{fullwidth}%
   \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\thanklessauthor}%

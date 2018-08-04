@@ -1,30 +1,26 @@
 %%
 % MODIFICATIONS by cbettinger
-% * moved command \monthyear to tufte-common.def
-% * added document class option 'a4paper'
-% * added page background color
-% * removed coloring of hyperlinks
 % * moved preambel to tufte-handout.cls
+% * moved \monthyear to tufte-common.def
+% * added document class options 'a4paper' and 'justified'
+% * added page background color
 
 \documentclass[a4paper,justified]{tufte-handout}
 
-% Handout metadata
 \title{A Tufte-Style Handout}
 \author{Dr. Henry Armitage}
 \publisher{Miscatonic University}
 %\date{28. March 2010} % without \date command, current date is supplied
 
-% Page background color
+% page background color
 % Comment out the following line if you do want to add a page background color (e.g. for printing)
 \pagecolor{LightChamois}
 
 \begin{document}
 
-% Title block
 \maketitle
 
 
-% Abstract
 \begin{abstract}
 \noindent
 This document describes the Tufte handout \LaTeX\ document style.
@@ -41,7 +37,6 @@ demonstration of the features of the Tufte-\LaTeX\ document classes
 and a style guide to their use.
 
 
-% normal sections
 \section{Page Layout}\label{sec:page-layout}
 \subsection{Headings}\label{sec:headings}
 This style provides \textsc{a}- and \textsc{b}-heads (that is,

@@ -1,24 +1,20 @@
 %%
 % MODIFICATIONS by cbettinger
-% * removed command \hlred
-% * removed epigraphs
-% * changed page style of dedication page in order to hide head
-% * added document class options 'a4paper' and 'oneside'
-% * modified copyright page
-% * added page background color
-% * removed coloring of hyperlinks
 % * moved preambel to tufte-book.cls
 % * moved chapters to separate files
+% * added document class options 'a4paper', 'oneside' and 'justified'
+% * added page background color
+% * added H.P. Lovecraft to dedication
+% * removed epigraphs
 
 \documentclass[a4paper,oneside,justified]{tufte-book}
 
-% Book metadata
 \title{A Tufte-Style Book}
 \subtitle{Lovecraft Edition}
 \author{Dr. Henry Armitage}
 \publisher{Miscatonic University}
 
-% Page background color
+% page background color
 % Comment out the following line if you do want to add a page background color (e.g. for printing)
 \pagecolor{LightChamois}
 
@@ -26,28 +22,20 @@
 
 \frontmatter
 
-% Title page
 \maketitle
+\makecopyright
 
-% Copyright page
-\copyrightpage
-
-% TOCs
 \tableofcontents
 \listoffigures
 \listoftables
 
-% Dedication page
-\dedicationpage{For \mbox{Edward R.~Tufte},\\
-	\mbox{Donald E.~Knuth}\\
-	and \mbox{H.P.~Lovecraft}}
+\makededication{For Edward R. Tufte,\\
+	Donald E. Knuth,\\
+	and H.P. Lovecraft}
 
-% Abstract
 \input{sample-book-chapters/abstract.tex}
 
 \mainmatter
-
-% normal chapters
 \input{sample-book-chapters/tufte-design.tex}
 \input{sample-book-chapters/tufte-book.tex}
 \input{sample-book-chapters/customizing.tex}
@@ -56,11 +44,9 @@
 
 \backmatter
 
-% References
 \bibliography{sample-handout}
 \bibliographystyle{plainnat}
 
-% Index
 \printindex
 
 \end{document}
