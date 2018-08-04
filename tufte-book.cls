@@ -5,6 +5,7 @@
 % * changed format of dedication page
 % * changed format of page numbers
 % * show sections in main TOC
+% * show chapter title (instead of book title) in oneside header
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
@@ -222,7 +223,7 @@
       \fancyhead[RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\textcolor{Maroon}{\thepage}}% chapter title
     }%
     {% one-side
-      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\plaintitle}}\quad\textcolor{Maroon}{\thepage}}% book title
+      \fancyhead[RE,RO]{\smallcaps{\newlinetospace{\leftmark}}\quad\textcolor{Maroon}{\thepage}}% chapter title
     }%
 }
 

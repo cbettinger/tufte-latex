@@ -11,7 +11,7 @@
 % * changed format of margin items
 % * changed format of chapter, section, subsection, paragraph and newthought
 % * changed format of TOCs
-& * added head rule
+% * added head rule
 % * added package pagecolor and added new color LightChamois
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 % * added XeTeX-compatible letter spacing
