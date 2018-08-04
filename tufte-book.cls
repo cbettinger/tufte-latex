@@ -4,6 +4,7 @@
 % * added \copyrightpage and \dedicationpage
 % * show sections in main TOC
 % * changed format of dedication
+% * changed format of copyright page
 
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 
@@ -103,10 +104,12 @@
 	Copyright \copyright\ \the\year\ \thanklessauthor
 
 	\par\smallcaps{Published by \thanklesspublisher}\\
-	\textit{\monthyear}
+	\monthyear
 
-	\par \smallcaps{Typeset}\\
-	\url{https://github.com/cbettinger/tufte-latex}\\
+	\par\smallcaps{Typeset}\\
+	\url{https://github.com/cbettinger/tufte-latex}
+	
+	
 	Based on original work by Kevin Godby, Bil Kleb, and Bill Wood,\\
 	licensed under the Apache License, Version 2.0\\
 	\url{https://github.com/Tufte-LaTeX/tufte-latex}
