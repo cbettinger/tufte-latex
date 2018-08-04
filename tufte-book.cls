@@ -103,10 +103,10 @@
 	\setlength{\parskip}{\baselineskip}
 	Copyright \copyright\ \the\year\ \thanklessauthor
 
-	\par\smallcaps{Published by \thanklesspublisher}\\
+	\par\smallcaps{\textsf{Published by \thanklesspublisher}}\\
 	\monthyear
 
-	\par\smallcaps{Typeset}\\
+	\par\smallcaps{\textsf{Typeset}}\\
 	\url{https://github.com/cbettinger/tufte-latex}
 	
 	
