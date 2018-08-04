@@ -122,7 +122,7 @@
 	\thispagestyle{empty}
 	~\vfill
 	\begin{fullwidth}\begin{center}\begin{doublespace}
-	\noindent\fontsize{18}{22}\selectfont\itshape\nohyphenation\textcolor{Maroon}{\textsc{#1}}
+	\noindent\fontsize{18}{22}\selectfont\itshape\nohyphenation\textcolor{Maroon}{#1}
 	\end{doublespace}\end{center}\end{fullwidth}
 	\vfill
 	\vfill
