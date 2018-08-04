@@ -1663,7 +1663,7 @@
   {\relax\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\begin{fullwidth}}{}}% format applied to label+text
   {\huge\thechapter}% label
   {0pt}% horizontal separation between label and title body
-  {\huge\rmfamily}% before the title body
+  {\huge\sffamily\textsc}% before the title body
   [\ifthenelse{\NOT\boolean{@tufte@symmetric}}{\end{fullwidth}}{}]% after the title body
 
 \titleformat{\section}%
