@@ -18,6 +18,8 @@
 % * added package pagecolor and provide color LightChamois
 % * changed format of chapter titles
 % * changed format of \newthought
+% * added XeTeX-compatible workaround for letter spacing
+% * changed default fonts if using XeTeX
 
 \ProvidesFile{tufte-common.def}[2015/06/21 v3.5.2 Common code for the Tufte-LaTeX styles]
 
@@ -810,6 +812,28 @@
 %% we're not to load letterspacing, so do nothing
 %}
 
+\RequirePackage{ifxetex}
+\ifxetex
+\RequirePackage{fontspec}
+	% set default fonts
+	\setmainfont{ETBembo}[Mapping=TeX-text]
+	\setsansfont{Gill Sans MT}[Mapping=TeX-text,Scale=MatchUppercase]
+	\setmonofont{Consolas}[Scale=MatchLowercase]
+	
+	% XeTeX-compatible workaround for letter spacing
+	\newcommand{\textls}[2][5]{\begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup}
+	\renewcommand{\allcapsspacing}[1]{\textls[15]{#1}}
+	
+	\renewcommand{\allcaps}[1]{\textls[15]{\MakeTextUppercase{#1}}}
+	
+	\renewcommand{\smallcapsspacing}[1]{\textls[10]{#1}}
+	\renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeUppercase{#1}}}
+	\renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
+	\renewcommand{\textsc}[1]{\smallcaps{#1}}
+	
+	\renewcommand\allcapsspacing[1]{{\addfontfeature{LetterSpace=15}#1}}
+	\renewcommand\smallcapsspacing[1]{{\addfontfeature{LetterSpace=10}#1}}
+\fi
 
 %%
 % An environment for paragraph-style section
