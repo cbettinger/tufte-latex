@@ -197,11 +197,10 @@
   \fi%
   \@mainmatterfalse%
   \pagenumbering{arabic}%
-  %\pagestyle{plain}%
-  \fancyhf{}%
-  \ifthenelse{\boolean{@tufte@twoside}}%
-    {\fancyhead[LE,RO]{\textcolor{Maroon}{\thepage}}}%
-    {\fancyhead[RE,RO]{\textcolor{Maroon}{\thepage}}}%
+  \pagestyle{plain}%
+  %\ifthenelse{\boolean{@tufte@twoside}}%
+  %  {\fancyhead[LE,RO]{\textcolor{Maroon}{\thepage}}}%
+  %  {\fancyhead[RE,RO]{\textcolor{Maroon}{\thepage}}}%
 }
 
 
