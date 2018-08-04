@@ -11,6 +11,7 @@
 % * changed format of margin items
 % * changed format of chapter, section, subsection, paragraph and newthought
 % * changed format of TOCs
+& * added head rule
 % * added package pagecolor and added new color LightChamois
 % * fixed a bug in \cleardoublepage that inserted unnecessary blank pages in oneside mode
 % * added XeTeX-compatible letter spacing
@@ -1512,9 +1513,12 @@
     {\fancyhfoffset[RE,RO]{\@tufte@overhang}}
 }
 
-% The running heads/feet don't have rules
-\renewcommand{\headrulewidth}{0pt}
+% add headrule
+\renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
+
+\renewcommand{\headrule}{\hbox to\headwidth{\color{Maroon}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrule}{\hbox to\headwidth{\color{Maroon}\leaders\hrule height \footrulewidth\hfill}}
 
 % The 'fancy' page style is the default style for all pages.
 \fancyhf{} % clear header and footer fields
@@ -1529,6 +1533,8 @@
 % bottom of pages -- the folios are unexpressed.
 \fancypagestyle{plain}{
   \fancyhf{} % clear header and footer fields
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
   % Uncomment the following five lines of code if you want the opening page
   % of the chapter to express the folio in the lower outside corner.
   %\ifthenelse{\boolean{@tufte@twoside}}
@@ -1540,6 +1546,8 @@
 % It's used on title pages and `intentionally blank' pages.
 \fancypagestyle{empty}{
   \fancyhf{} % clear header and footer fields
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
 }
 
 
