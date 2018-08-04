@@ -1586,7 +1586,7 @@
   \vspace*{12.5pc}%
   \fontsize{36}{40}\selectfont\par\noindent\textcolor{darkgray}{\thanklesstitle}%
   \vspace{1pc}%
-  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\plainsubtitle}}%
+  \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\allcaps{\textsf{\plainsubtitle}}}%
   \vfill%
   \begin{fullwidth}%
   \fontsize{18}{20}\selectfont\par\noindent\textcolor{darkgray}{\thanklessauthor}%
